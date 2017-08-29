@@ -1,0 +1,9 @@
+#!/bin/bash
+
+name='MaBoSS'
+url="https://maboss.curie.fr/pub/MaBoSS-env-2.0.tgz"
+
+get_src "$name" "$url"
+(cd "$RBBT_SOFTWARE_DIR/.build/"*/engine/src; make install; cp -R "$RBBT_SOFTWARE_DIR/.build/"* "$RBBT_SOFTWARE_DIR/opt/$name/" )
+
+

@@ -1,11 +1,20 @@
-ruby=/$PWD filter="*.rb *.rake Rakefile *.rdoc *.R *.sh *.js *.haml *.sass *.txt *.conf" {
+MaBoSS=/$PWD filter="*.rb *.rake Rakefile *.rdoc *.R *.sh *.js *.haml *.sass *.txt *.conf" {
+ workflow.rb
  bin=bin filter="*"{
  }
  lib=lib {
+  MaBoSS.rb
  }
  test=test {
   test_helper.rb
  }
  data=data filter="*"{
+ }
+ share=share{
+  install=install{
+   software=software{
+    MaBoSS
+   }
+  }
  }
 }
